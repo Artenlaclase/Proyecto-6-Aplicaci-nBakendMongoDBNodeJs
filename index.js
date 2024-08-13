@@ -18,10 +18,8 @@ app.use(express.json())
 app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
 
+app.get('/test', (req, res) => {
+    res.send('La ruta de prueba funciona!');
+});
 
-
-
-
-
-
-app.listen(process.env.PORT, () => console.log('Servidor escuchando en el puerto ' + process.env.PORT))
+app.listen(process.env.PORT, () => console.log('Servidor escuchando en el puerto ' + process.env.PORT));

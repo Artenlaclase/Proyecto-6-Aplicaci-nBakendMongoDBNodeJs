@@ -62,3 +62,38 @@ exports.verifyToken = async (req, res) => {
     }
 };
 
+exports.updateUser = async (req, res) => {
+    const { username, email, password } = req.body;
+    const updates = {};
+
+    if (username) updates.username = username;
+    if (email) updates.email = email;
+    if (password) {
+        const salt = await bcryptjs.genSalt(10);
+        const hashedPassword = await bcryptjs.hash(password, salt);
+        updates.password = hashedPassword;
+    }
+
+    try {
+        const updateUser = await User.finByIdAndUpdate(req.user.id, updates, {
+            new: true,
+            runValidators: true,
+            select: '-password'
+        });
+
+        if (!updateUser) {
+            return res.status(404).json({
+                msg: 'Usuario no encontrado',
+                error: error.message
+            });
+        }
+        res.json(updateUser);
+
+    } catch (error) {
+        res.status(500).json({
+            msg: "Error al actualizar el usuario",
+            error: error.message
+        });
+
+    }
+};

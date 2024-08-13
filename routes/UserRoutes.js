@@ -1,6 +1,7 @@
 const express = require('express');
 const auth = require('../middleware/authorization');
-const { createUser, login, verifyToken } = require('../controllers/userController');
+const { createUser, login, verifyToken, updateUser } = require('../controllers/userController');
+const { getAllUsers } = require('../controllers/getUser');
 
 const userRoute = express.Router();
 
@@ -10,9 +11,9 @@ userRoute.post('/login', login);
 
 userRoute.get('/verifytoken', auth, verifyToken);
 
-userRoute.put('/update')
+userRoute.put('/update', auth, updateUser);
 
-
+userRoute.get('/all', auth, getAllUsers);
 
 
 module.exports = userRoute;
