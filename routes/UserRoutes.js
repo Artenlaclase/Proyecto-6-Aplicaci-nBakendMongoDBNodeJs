@@ -10,4 +10,9 @@ userRoute.post('/login', login);
 
 userRoute.get('/verifytoken', auth, verifyToken);
 
+userRoute.put('/update')
+
+
+
+
 module.exports = userRoute;
