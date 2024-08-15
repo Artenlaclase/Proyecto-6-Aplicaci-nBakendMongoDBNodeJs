@@ -53,12 +53,48 @@ La aplicación incluye los siguientes aspectos:
 | Actualizar un producto                | PUT        | `/api/product/update/:id`      | Como vendedor, quiero actualizar los detalles de un producto específico, como su nombre, descripción y precio. |
 | Eliminar un producto                  | DELETE     | `/api/product/delete/:id`      | Como vendedor, quiero eliminar un producto específico de mi catálogo cuando ya no esté disponible para la venta. |
 
-## Despliegue
 
-El proyecto ha sido desplegado utilizando [Render.com](https://render.com/) para el servicio web y [MongoDB Atlas](https://www.mongodb.com/atlas) para la base de datos.
+### Despliegue
 
-**[Repositorio del proyecto en GitHub](https://github.com/Artenlaclase/Proyecto-6-Aplicaci-nBakendMongoDBNodeJs)**
+La aplicación fue desplegada en [render.com](https://render.com/) y utiliza [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) para el almacenamiento de datos.
+
+## Instrucciones para Ejecutar el Proyecto
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Artenlaclase/Proyecto-6-Aplicaci-nBakendMongoDBNodeJs.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd Proyecto-6-Aplicaci-nBakendMongoDBNodeJs
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Configura las variables de entorno en un archivo `.env`:
+   ```
+   PORT=3000
+   MONGO_URI=tu_url_de_mongodb_atlas
+   JWT_SECRET=tu_clave_secreta
+   ```
+5. Inicia la aplicación:
+   ```bash
+   npm start
+   ```
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, por favor crea un fork del repositorio y envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT.
 
 ---
 
-Este proyecto fue desarrollado como parte del Bootcamp Full Stack de la UDD, Cohort 13.
+**Raúl Rosales**  
+Desarrollador Web Full Stack
+```
+
+Este archivo `README.md` proporciona una descripción completa de tu proyecto, incluyendo instrucciones para su configuración y despliegue.
