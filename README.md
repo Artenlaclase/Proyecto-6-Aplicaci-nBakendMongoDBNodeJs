@@ -80,7 +80,7 @@ La aplicación fue desplegada en [render.com](https://render.com/) y utiliza [Mo
    ```
 5. Inicia la aplicación:
    ```bash
-   npm start
+   npm  run start
    ```
 
 ## Contribuciones
@@ -95,6 +95,3 @@ Este proyecto está bajo la Licencia MIT.
 
 **Raúl Rosales**  
 Desarrollador Web Full Stack
-```
-
-Este archivo `README.md` proporciona una descripción completa de tu proyecto, incluyendo instrucciones para su configuración y despliegue.
