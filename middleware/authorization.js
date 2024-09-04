@@ -5,8 +5,7 @@ module.exports = (req, res, next) => {
 	const  { authorization } = req.headers;
 	
 	if (!authorization) {
-		return res.status(401).json({ msg: "Acceso no autorizado ", 
-			error: error.message });
+		return res.status(401).json({ msg: "Acceso no autorizado "});
 	}
 
 	try {
@@ -17,9 +16,7 @@ module.exports = (req, res, next) => {
 			req.user = openToken.user
 			next()
 		} else { 
-			return res.status(401).json({ msg: "Acceso no autorizado",
-				error: error.message
-			 });
+			return res.status(401).json({ msg: "Acceso no autorizado"});
 		}
 	} catch (error) {
 		res.json({ msg: "we have an error", 

@@ -13,7 +13,7 @@ userRoute.get('/verifytoken', auth, verifyToken);
 
 userRoute.put('/update', auth, updateUser);
 
-userRoute.get('/all', auth, getAllUsers);
+userRoute.get('/all', getAllUsers);
 
 
 module.exports = userRoute;
