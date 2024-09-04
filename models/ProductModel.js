@@ -10,7 +10,11 @@ const productSchema = mongoose.Schema({
     descripcion: {
         type: String,
         required: true
+    },
+    imagen:{
+        type: String
     }
+
 },
     {
         timestamps: true
