@@ -14,12 +14,14 @@ module.exports = (req, res, next) => {
 		if (type === "Token" || type === "Bearer") {
 			const openToken = jwt.verify(token, process.env.SECRET);
 			req.user = openToken.user
-			next()
+			next();
 		} else { 
 			return res.status(401).json({ msg: "Acceso no autorizado"});
 		}
 	} catch (error) {
-		res.json({ msg: "we have an error", 
-			error:error.message });
+		res.json({ 
+			msg: "we have an error", 
+			error:error.message 
+		});
 	}
 };
