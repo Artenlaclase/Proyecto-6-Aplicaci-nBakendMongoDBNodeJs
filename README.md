@@ -9,6 +9,7 @@
 Este proyecto consiste en la creación de una aplicación backend con funciones de autenticación y autorización, utilizando tecnologías como JWT (JSON Web Tokens), Node.js, MongoDB y Mongoose. La aplicación está diseñada para permitir la gestión de usuarios y productos, implementando operaciones CRUD (Crear, Leer, Actualizar, Borrar) en los servicios desarrollados. Además, se ha documentado la API utilizando OpenAPI y Swagger.
 
 El proyecto incluye dos modelos principales: uno para Usuarios y otro para Productos, los cuales están interrelacionados mediante MongoDB. El despliegue se ha realizado utilizando MongoDB Atlas para la base de datos y Render.com para la entrega del proyecto.
+URI Render: https://app-backend-mongodb-nodejs.onrender.com
 
 ## Objetivos de Aprendizaje
 
